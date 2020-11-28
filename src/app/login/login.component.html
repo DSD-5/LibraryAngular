@@ -1,0 +1,46 @@
+<div class="col-12">
+    <div class="row">
+        <div class="col-lg-3 col-0"></div>
+        <div class="col-lg-6 col-12">
+            <div class="row m-3 border border-dark rounded">
+                <div class="col-lg-12 col-sm-12">
+                    <form role="form" class="center-align" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="form-group col-md-12 text-center">
+                            <h1 class="m-3 titulo">CLIENTES REGISTRADOS</h1>
+                        </div>
+                        <div class="form-group col-md-12 text-center mt-2">
+                            <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputUsuario">Usuario</label>
+                            <input type="usuario" class="form-control" id="
+                            inputUsuario" placeholder="Usuario" formControlName="user">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputContraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña" formControlName="pass">
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                            <mat-spinner class="custom-spinner" diameter="25" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
+                        </div>
+                        <div class="form-group col-md-4 mt-2">
+                            <button class="btn btn-login btn-block" [disabled]="!userForm.valid" [style.visibility]="isLoading ? 'hidden': 'visible'">Iniciar Sesión</button>
+                            <!-- <button type="button" class="btn btn-login btn-block">Iniciar sesion</button> -->
+                            <a href="" class="olvido mt-1">¿Olvidó su contraseña?</a>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <p class="ingresa" routerLink="/registro" style="cursor: pointer;">Registrate</p>
+                            <!-- <img src="../assets/image/facebook.png"></img> -->
+                        </div>
+                    </div>
+                    </form> 
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-3 col-0"></div>
+    </div>
+    
+</div>
