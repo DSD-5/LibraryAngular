@@ -35,6 +35,10 @@ h1.example-app-name {
   color: #fff;
 }
 
+.azul{
+  outline-color: rgb(29, 87, 145);
+}
+
 .buscar{
   background: #ffffff!important;
   border: none!important;
@@ -42,7 +46,7 @@ h1.example-app-name {
   max-width: 95%;
   border-radius: 1px;
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-  
+  font-size: 15px;
   height: 38px;
   line-height: 1.42857143;
   padding: 0 9px;
@@ -94,4 +98,11 @@ h1.example-app-name {
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
   box-shadow: none !important;
+}
+
+.sesion{
+  color: #666;
+  line-height: 22px;
+  font-size: 14px;
+    
 }

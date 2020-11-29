@@ -12,20 +12,23 @@ export class CarritoServices {
     verCarrito(): Observable<any>{
         let token = localStorage.getItem('token');
         let header = new HttpHeaders({
+            'Content-Type': 'application/json',
             'Authorization': 'Bearer '+token,
+            'Host':'MI PC',
         });
-        console.log(token);
+        console.log('Bearer '+token);
         let params = new URLSearchParams();
-        params.set('deliveryId','1');
-        params.set('direction','Av%PERU%2024%20');
+        params.set('direction','ABC');
         params.set('preview','true');
-        params.set('reference','OVALO%20JOSE%20GRANDA');
-        params.set('shoppingId','1');
+        params.set('reference','ABC');
+        params.set('shoppingId','19');
         params.set('suscriptionId','1');
-        return this.http.post(environment.CARRITO, params.toString(),{}).pipe(map(response => {
+        params.set('deliveryId','1');
+        return this.http.post(environment.CARRITO,params.toString(), {headers: header}).pipe(map(response => {
+            console.log('Bearer ');
             console.log(response);
             return response;
         }));
-    }
-
+    }    
+    
 }
