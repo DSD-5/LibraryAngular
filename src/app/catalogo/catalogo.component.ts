@@ -20,7 +20,7 @@ export class CatalogoComponent implements OnInit {
 
   ngOnInit() {
 
-    this.catalogoServices.listarLibros(1).subscribe(result => {
+    this.catalogoServices.listarLibros().subscribe(result => {
       this.libro = result;
     });
     

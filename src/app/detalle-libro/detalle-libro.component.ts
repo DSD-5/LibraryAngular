@@ -27,7 +27,7 @@ export class DetalleLibroComponent implements OnInit {
 
   ngOnInit() {
     this.idlibro = this.route.snapshot.paramMap.get('id');
-    this.catalogoServices.listarLibros(1).subscribe(result => {
+    this.catalogoServices.listarLibros().subscribe(result => {
       this.libro = result;
       this.libro.forEach((item,i) => {
               if(this.libro[i].id == this.idlibro){

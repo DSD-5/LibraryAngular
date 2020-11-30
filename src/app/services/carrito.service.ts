@@ -14,7 +14,6 @@ export class CarritoServices {
         let header = new HttpHeaders({
             'Content-Type': 'application/json',
             'Authorization': 'Bearer '+token,
-            'Host':'MI PC',
         });
         console.log('Bearer '+token);
         let params = new URLSearchParams();
@@ -24,7 +23,9 @@ export class CarritoServices {
         params.set('shoppingId','19');
         params.set('suscriptionId','1');
         params.set('deliveryId','1');
-        return this.http.post(environment.CARRITO,params.toString(), {headers: header}).pipe(map(response => {
+        return this.http.post(environment.CARRITO.replace("{direction}","ABC").replace("{preview}","true")
+        .replace("{reference}","ABC").replace("{shoppingId}","19").replace("{suscriptionId}","1")
+        .replace("{deliveryId}","1"), {},{headers: header}).pipe(map(response => {
             console.log('Bearer ');
             console.log(response);
             return response;

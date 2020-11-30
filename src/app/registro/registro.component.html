@@ -4,23 +4,28 @@
         <div class="col-lg-6 col-12">
             <div class="row m-3 border border-dark rounded">
                 <div class="col-lg-12 col-sm-12">
+                    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                     <div class="row m-3">
                         <h1 class="m-3 titulo">CREAR NUEVA CUENTA DE CLIENTE</h1>
-                        <div class="form-group col-md-10">
+                        <div class="form-group col-md-12">
                             <label for="inputUsuario">Usuario</label>
-                            <input type="usuario" class="form-control" id="inputUsuario" placeholder="Usuario">
+                            <input formControlName="usuario" class="form-control" id="inputUsuario" placeholder="Usuario">
                         </div>
-                        <div class="form-group col-md-10">
-                            <label for="inputUsuario">Nombres</label>
-                            <input type="usuario" class="form-control" id="inputUsuario" placeholder="Nombres">
+                        <div class="form-group col-md-12">
+                            <label for="inputContraseña">Contraseña</label>
+                            <input formControlName="contraseña" class="form-control" id="inputContraseña" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputNombres">Nombres</label>
+                            <input formControlName="nombres" class="form-control" id="inputUsuario" placeholder="Nombres">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputUsuario">Apellido Paterno</label>
-                            <input type="usuario" class="form-control" id="inputUsuario" placeholder="Apellido Paterno">
+                            <label for="paterno">Apellido Paterno</label>
+                            <input formControlName="paterno" class="form-control" id="paterno" placeholder="Apellido Paterno">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputUsuario">Apellido Materno</label>
-                            <input type="usuario" class="form-control" id="inputUsuario" placeholder="Apellido Materno">
+                            <label for="materno">Apellido Materno</label>
+                            <input formControlName="materno" class="form-control" id="materno" placeholder="Apellido Materno">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputUsuario">Tipo de documento</label>
@@ -29,26 +34,30 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputUsuario">Numero de documento</label>
-                            <input type="usuario" class="form-control" id="inputUsuario" placeholder="Numero de documento">
+                            <label for="inputDni">Numero de documento</label>
+                            <input formControlName="dni" class="form-control" id="inputUsuario" placeholder="Numero de documento">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputUsuario">Departamento</label>
-                            <select class="form-control">
+                            <label for="departamento">Departamento</label>
+                            <select formControlName="departamento" class="form-control">
                                 <option>Lima</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputUsuario">Provincia</label>
-                            <select class="form-control">
+                            <label for="provincia">Provincia</label>
+                            <select formControlName="provincia" class="form-control">
                                 <option>Lima</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputUsuario">Distrito</label>
-                            <select class="form-control">
+                            <label for="distrito">Distrito</label>
+                            <select formControlName="distrito" class="form-control">
                                 <option>Lima</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputUbigeo">Ubigeo</label>
+                            <input formControlName="ubigeo" class="form-control" id="inputUbigeo" placeholder="Ubigeo">
                         </div>
                         <div class="form-group col-md-4">
                             
@@ -57,9 +66,10 @@
                             
                         </div>
                         <div class="form-group col-md-4">
-                            <button type="button" class="btn btn-block btn-crear">Crear</button>
+                            <button type="submit" class="btn btn-block btn-crear">Crear</button>
                         </div>
                     </div>
+                </form>
                 </div>
                 
             </div>

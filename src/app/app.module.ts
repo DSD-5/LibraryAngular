@@ -27,6 +27,7 @@ import {RouterModule} from '@angular/router';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CatalogoCategoriaComponent } from './catalogo-categoria/catalogo-categoria.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DetalleLibroComponent,
     CarritoComponent,
     LoginComponent,
+    CatalogoCategoriaComponent,
     
   ],
   imports: [

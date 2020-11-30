@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 export class CatalogoServices {
     constructor(private http: HttpClient) {}
 
-    listarLibros(categoria: number): Observable<any>{
+    listarLibros(): Observable<any>{
         return this.http.get<any>(environment.CATALOGO, {
         }).pipe(map(response => {
             return response;
@@ -22,4 +22,12 @@ export class CatalogoServices {
         }))
     }
 
+    categoriaLibro(id: string): Observable<any>{
+        console.log(id);
+        return this.http.get<any>(environment.CATEGORIA_CATALOGO.replace("{id}",id), {
+        }).pipe(map(response => {
+            console.log(response);
+            return response;
+        }))
+    }
 }

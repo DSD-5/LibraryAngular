@@ -25,4 +25,26 @@ export class AuthenticationServices {
             return response;
         }));
     }
+
+    registro(amaterno:string, apaterno:string, departamento:string, distrito:string, email:string, estado:string,
+        nombres:string, dni:string, provincia:string, tipodoc:string, ubigeo:string, usuario:string, password:string){
+        return this.http.post<any>(environment.REGISTRAR,{
+            "apemat": amaterno,
+            "apepat": apaterno,
+            "departamento": departamento,
+            "distrito": distrito,
+            "email": email,
+            "estado": estado,
+            "nombres": nombres,
+            "numdoc": dni,
+            "provincia": provincia,
+            "tipodoc": "1",
+            "ubigueo": ubigeo,
+            "usuario": usuario,
+            "password" : password,
+        },{}).pipe(map(response => {
+            console.log(response);
+            return response;
+        }))
+    }
 }
