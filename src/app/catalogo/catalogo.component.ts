@@ -23,10 +23,10 @@ export class CatalogoComponent implements OnInit {
     this.catalogoServices.listarLibros().subscribe(result => {
       this.libro = result;
     });
-    
+
     this.auth.verCarrito().subscribe(result => {
       // console.log(result);
-    })
+    });
   }
 
 }

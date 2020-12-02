@@ -42,7 +42,7 @@ import { CatalogoCategoriaComponent } from './catalogo-categoria/catalogo-catego
     CarritoComponent,
     LoginComponent,
     CatalogoCategoriaComponent,
-    
+
   ],
   imports: [
     BrowserModule,

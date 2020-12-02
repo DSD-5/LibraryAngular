@@ -13,9 +13,9 @@ export class CarritoServices {
         let token = localStorage.getItem('token');
         let header = new HttpHeaders({
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+token,
+            'Authorization': token,
         });
-        console.log('Bearer '+token);
+        console.log(token);
         let params = new URLSearchParams();
         params.set('direction','ABC');
         params.set('preview','true');
@@ -30,6 +30,6 @@ export class CarritoServices {
             console.log(response);
             return response;
         }));
-    }    
-    
+    }
+
 }
