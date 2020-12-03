@@ -24,9 +24,6 @@ export class CatalogoComponent implements OnInit {
       this.libro = result;
     });
 
-    this.auth.verCarrito().subscribe(result => {
-      // console.log(result);
-    });
   }
 
 }

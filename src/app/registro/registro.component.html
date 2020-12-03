@@ -1,31 +1,36 @@
-<div class="col-12">
+<div class="col-12 mt-3">
     <div class="row">
         <div class="col-lg-3 col-0"></div>
         <div class="col-lg-6 col-12">
             <div class="row m-3 border border-dark rounded">
+
                 <div class="col-lg-12 col-sm-12">
-                    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+                    <form role="form" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                     <div class="row m-3">
                         <h1 class="m-3 titulo">CREAR NUEVA CUENTA DE CLIENTE</h1>
                         <div class="form-group col-md-12">
-                            <label for="inputUsuario">Usuario</label>
-                            <input formControlName="usuario" class="form-control" id="inputUsuario" placeholder="Usuario">
+                            <label>Usuario</label>
+                            <input formControlName="usuario" class="form-control"  placeholder="Usuario">
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="inputContraseña">Contraseña</label>
-                            <input formControlName="contraseña" class="form-control" id="inputContraseña" placeholder="Contraseña">
+                            <label>Contraseña</label>
+                            <input formControlName="contraseña" class="form-control"  placeholder="Contraseña">
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label>Correo electrónico</label>
+                          <input formControlName="email" type="email" class="form-control"placeholder="Correo electrónico">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputNombres">Nombres</label>
-                            <input formControlName="nombres" class="form-control" id="inputUsuario" placeholder="Nombres">
+                            <input formControlName="nombres" class="form-control"placeholder="Nombres">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="paterno">Apellido Paterno</label>
-                            <input formControlName="paterno" class="form-control" id="paterno" placeholder="Apellido Paterno">
+                            <input formControlName="paterno" class="form-control"  placeholder="Apellido Paterno">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="materno">Apellido Materno</label>
-                            <input formControlName="materno" class="form-control" id="materno" placeholder="Apellido Materno">
+                            <input formControlName="materno" class="form-control"  placeholder="Apellido Materno">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputUsuario">Tipo de documento</label>
@@ -34,47 +39,48 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputDni">Numero de documento</label>
-                            <input formControlName="dni" class="form-control" id="inputUsuario" placeholder="Numero de documento">
+                            <label>Numero de documento</label>
+                            <input formControlName="dni" class="form-control" maxlength="8" placeholder="Numero de documento">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="departamento">Departamento</label>
                             <select formControlName="departamento" class="form-control">
-                                <option>Lima</option>
+                                <option value="Lima">Lima</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="provincia">Provincia</label>
                             <select formControlName="provincia" class="form-control">
-                                <option>Lima</option>
+                                <option value="Lima">Lima</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="distrito">Distrito</label>
                             <select formControlName="distrito" class="form-control">
-                                <option>Lima</option>
+                                <option value="Lima">Lima</option>
                             </select>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputUbigeo">Ubigeo</label>
-                            <input formControlName="ubigeo" class="form-control" id="inputUbigeo" placeholder="Ubigeo">
+                            <input formControlName="ubigeo" class="form-control" placeholder="Ubigeo">
                         </div>
                         <div class="form-group col-md-4">
-                            
+
                         </div>
                         <div class="form-group col-md-4">
-                            
+
                         </div>
                         <div class="form-group col-md-4">
-                            <button type="submit" class="btn btn-block btn-crear">Crear</button>
+                            <button type="submit" class="btn btn-block btn-crear" [style.visibility]="isLoading ? 'hidden': 'visible'">Crear</button>
+                            <mat-spinner class="custom-spinner mt-2" diameter="25" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
                         </div>
                     </div>
                 </form>
                 </div>
-                
+
             </div>
         </div>
         <div class="col-lg-3 col-0"></div>
     </div>
-    
+
 </div>

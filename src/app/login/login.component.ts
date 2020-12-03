@@ -30,18 +30,17 @@ export class LoginComponent implements OnInit {
   get f() { return this.userForm.controls; }
 
   onSubmit() {
-
-    if (this.userForm.invalid)
-      return;
+    this.isLoading = true;
 
     // this.isLoading = true;
     //var valor = this.tipoCampo == 1 ? this.f.nrosuministro.value : this.f.dni.value;
     this.auth.login(this.f.user.value, this.f.pass.value).subscribe(result => {
       // console.log(result);
       this.isLoading = false;
-      localStorage.setItem('token',result.access_token);
+      localStorage.setItem('token', result.access_token);
       // this.router.navigate(['/catalogo']);
-      this.router.navigate(['/catalogo']);
+      window.location.href = 'http://localhost:4200';
+      // this.router.navigate(['/catalogo']);
     },
     error =>{
       this.isLoading = false;

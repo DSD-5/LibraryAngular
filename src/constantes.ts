@@ -10,5 +10,5 @@ export const environment = {
     LOGIN : 'http://23.101.187.222:8099/api/segurity/oauth/token',
     CARRITO : 'http://23.101.187.222:8099/api/rentsales/v1/rent-sales/rentSalesBook?direction={direction}&preview={preview}&reference={reference}&shoppingId={shoppingId}&suscriptionId={suscriptionId}&deliveryId={deliveryId}',
     ADD_CARRITO: 'http://23.101.187.222:8099/api/shoppingcart/v1/shopping/createShoppingCart',
-    REGISTRAR: 'http://23.101.187.222:8099/customermanagement/registerClient',
+    REGISTRAR: 'http://23.101.187.222:8099/api/customer/management/customermanagement/registerClient',
   }

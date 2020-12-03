@@ -27,7 +27,7 @@ export class AuthenticationServices {
     }
 
     registro(amaterno:string, apaterno:string, departamento:string, distrito:string, email:string, estado:string,
-        nombres:string, dni:string, provincia:string, tipodoc:string, ubigeo:string, usuario:string, password:string){
+        nombres:string, dni:string, provincia:string, ubigeo:string, usuario:string, password:string){
         return this.http.post<any>(environment.REGISTRAR,{
             "apemat": amaterno,
             "apepat": apaterno,

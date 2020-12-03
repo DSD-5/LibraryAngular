@@ -1,0 +1,102 @@
+.cabecera{
+  padding: 20px 11px 10px;
+  font-family: 'Rubik',sans-serif!important;
+  color: #333;
+  font-style: normal;
+  line-height: 1.42857143;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.precio{
+  color: #666;
+  font-size: 1.2rem;
+  display: block;
+  line-height: 1;
+  white-space: nowrap;
+  font-family: 'Rubik',sans-serif!important;
+  font-style: normal;
+}
+
+.libro{
+  font-family: 'Rubik',sans-serif!important;
+  line-height: 1.42857143;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.titulo{
+  color: #1d5791;
+  font-size: 24px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: 'Rubik',sans-serif!important;
+}
+
+.resumen{
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 12px 0;
+  font-family: 'Rubik',sans-serif!important;
+  background-color: #f8f8f8!important;
+  color: #333;
+  font-style: normal;
+  line-height: 1.42857143;
+
+}
+
+.envio {
+  border-top: 1px solid #e1e1e1;
+  cursor: pointer;
+  margin-bottom: 0;
+  position: relative;
+  padding: 10px 40px 10px 15px;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.text-estimacion{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  cursor: pointer;
+  margin-bottom: 0;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-family: 'Rubik',sans-serif!important;
+  background-color: #f8f8f8!important;
+}
+
+.btn-estimar{
+  background:#666!important;
+  color: #fff;
+}
+
+.btn-amarillo{
+  background: #ffa600!important;
+  border: 1px solid #ffa600!important;
+  border-radius: 2.5em!important;
+  color: #fff;
+}
+
+.total{
+  display: inline-block;
+  /* font-weight: 600; */
+  font-size: 0.8rem;
+  font-family: 'Rubik',sans-serif!important;
+  background-color: #f8f8f8!important;
+}
+
+.comprar{
+  background: #ffa600!important;
+  /* border: 1px solid #ffa600!important; */
+  border-radius: 2.5em!important;
+  font-weight: 700;
+  font-size: 1.3em;
+}

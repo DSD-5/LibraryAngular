@@ -1,4 +1,4 @@
-<div class="col-12">
+<div class="col-12 mt-3">
     <div class="row">
         <div class="col-lg-3 col-0"></div>
         <div class="col-lg-6 col-12">
@@ -21,13 +21,21 @@
                             <label for="inputContraseña">Contraseña</label>
                             <input type="password" class="form-control" id="inputContraseña" placeholder="Contraseña" formControlName="pass">
                         </div>
-                        
-                        <div class="form-group col-md-4">
-                            <mat-spinner class="custom-spinner" diameter="25" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
+
+                        <div class="form-group col-md-4 text-center">
                         </div>
-                        <div class="form-group col-md-4 mt-2">
+                        <div class="form-group col-md-4 mt-2 text-center">
                             <button class="btn btn-login btn-block" [disabled]="!userForm.valid" [style.visibility]="isLoading ? 'hidden': 'visible'">Iniciar Sesión</button>
                             <!-- <button type="button" class="btn btn-login btn-block">Iniciar sesion</button> -->
+                            <div class="container nomargin">
+                              <div class="row nomargin">
+                                <div class="col-4"></div>
+                                <div class="col-4 text-center">
+                                  <mat-spinner class="centro" diameter="25" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
+                                </div>
+                                <div class="col-4"></div>
+                              </div>
+                            </div>
                             <a href="" class="olvido mt-1">¿Olvidó su contraseña?</a>
                         </div>
                         <div class="form-group col-md-12">
@@ -35,12 +43,12 @@
                             <!-- <img src="../assets/image/facebook.png"></img> -->
                         </div>
                     </div>
-                    </form> 
+                    </form>
                 </div>
-                
+
             </div>
         </div>
         <div class="col-lg-3 col-0"></div>
     </div>
-    
+
 </div>
