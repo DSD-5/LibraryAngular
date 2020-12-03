@@ -20,7 +20,7 @@ export class CarritoServices {
         params.set('direction','ABC');
         params.set('preview','true');
         params.set('reference','ABC');
-        params.set('shoppingId','1');
+        params.set('shoppingId','2');
         params.set('suscriptionId','1');
         params.set('deliveryId','1');
         return this.http.post(environment.CARRITO.replace("{direction}","ABC").replace("{preview}","true")

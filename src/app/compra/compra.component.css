@@ -49,3 +49,12 @@
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-family: 'Rubik',sans-serif!important;
 }
+
+.txt-precio{
+  text-align: right;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Rubik',sans-serif!important;
+  color: rgb(29, 87, 145);
+}
