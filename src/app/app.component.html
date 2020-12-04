@@ -1,21 +1,23 @@
 
 <mat-toolbar class="bg-primary-custom">
-  <div class="row">
-    <div class="col-12 col-md-4 col-lg-4 mt-3 text-center">
-      <a class="navbar-brand"   href="#"><img src="assets/image/logo.png"  height="30" alt=""></a>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4 mt-4 text-center">
-      <input type="text" class="buscar" placeholder="Busca tu libro" name="Busca tu libro"><button class="btn-buscar"><mat-icon>search</mat-icon></button>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4 mt-4 text-center">
-      <button mat-button routerLink="/login" *ngIf="!logueado" class="sesion"><svg width="1.6em" height="1.6em" viewBox="0 0 16 16" class="bi bi-person-fill"  xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-      </svg>Iniciar sesión</button>
-      <button mat-button *ngIf="logueado">Bienvenido</button>
-      <button mat-button routerLink="/carrito"><svg width="1.6em" height="1.6em" viewBox="0 0 16 16" class="bi bi-cart3 azul"  xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-      </svg></button>
-      <button mat-button (click)="cerrarSesion();" *ngIf="logueado"><mat-icon>logout</mat-icon></button>
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-4 mt-3 text-center">
+        <a class="navbar-brand"   href="#"><img src="assets/image/logo.png"  height="30" alt=""></a>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mt-4 text-center">
+        <input type="text" class="buscar" placeholder="Busca tu libro" name="Busca tu libro"><button class="btn-buscar"><mat-icon>search</mat-icon></button>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mt-4 text-center">
+        <button mat-button routerLink="/login" *ngIf="!logueado" class="sesion"><svg width="1.6em" height="1.6em" viewBox="0 0 16 16" class="bi bi-person-fill"  xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>Iniciar sesión</button>
+        <button mat-button *ngIf="logueado">Bienvenido</button>
+        <button mat-button routerLink="/carrito"><svg width="1.6em" height="1.6em" viewBox="0 0 16 16" class="bi bi-cart3 azul"  xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+        </svg></button>
+        <button mat-button (click)="cerrarSesion();" *ngIf="logueado"><mat-icon>logout</mat-icon></button>
+      </div>
     </div>
   </div>
 
