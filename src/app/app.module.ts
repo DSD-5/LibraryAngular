@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PlanesComponent } from './planes/planes.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { DetalleLibroComponent } from './detalle-libro/detalle-libro.component';
@@ -28,11 +27,13 @@ import { CatalogoCategoriaComponent } from './catalogo-categoria/catalogo-catego
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 import { CompraComponent } from './compra/compra.component';
+import { ReciboComponent } from './recibo/recibo.component';
+import { PlanComponent } from './plan/plan.component';
+// import { NgxSoapModule } from 'ngx-soap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlanesComponent,
     RegistroComponent,
     CatalogoComponent,
     DetalleLibroComponent,
@@ -41,7 +42,8 @@ import { CompraComponent } from './compra/compra.component';
     CatalogoCategoriaComponent,
     ModalComponent,
     CompraComponent,
-
+    ReciboComponent,
+    PlanComponent,
   ],
   imports: [
     BrowserModule,

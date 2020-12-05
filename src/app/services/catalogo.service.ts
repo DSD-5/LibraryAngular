@@ -9,6 +9,7 @@ export class CatalogoServices {
     constructor(private http: HttpClient) {}
 
     listarLibros(): Observable<any>{
+
         return this.http.get<any>(environment.CATALOGO, {
         }).pipe(map(response => {
             return response;

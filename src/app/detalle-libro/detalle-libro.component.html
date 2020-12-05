@@ -1,52 +1,65 @@
 <div class="col-12 mt-3">
     <div class="row">
-        <div class="col-4">
+      <div class="col-0 col-sm-0 col-md-2 col-lg-3 col-xl-3"></div>
+      <div class="col-0 col-sm-0 col-md-8 col-lg-6 col-xl-6">
+        <div class="row">
+          <div class="col-4">
             <div class="row mt-2 ml-3 flex-row-reverse">
                 <img src="assets/image/proximamente.jpg" class="img-fluid img-thumbnail" alt="...">
             </div>
         </div>
         <div class="col-8">
-            <div class="container mt-2 mr-3">
-                <h2 class="h3">{{titulo}}</h2>
-                <!-- <h3 class="text-muted">Anonimo</h3> -->
-                <p class="text-muted">{{descripcion}}</p>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-12 mt-2">
-                            <div class="row">
-                                <div class="col-6">Precio venta</div>
-                                <div class="col-6 text-right">S/. {{precioventa}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">Precio renta</div>
-                                <div class="col-6 text-right">S/. {{preciorenta}}</div>
-                            </div>
-                        </div>
-                        <div class="col-12 mt-2">
-                            <div class="row">
-                                <div class="col-6">Tipo</div>
-                                <div class="col-6 text-right">
-                                    <select class="form-control">
-                                        <option>Compra</option>
-                                        <option>Venta</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mt-2">
-                            <div class="row">
-                                <div class="col-6">Cantidad</div>
-                                <div class="col-6 text-right">
-                                    <input type="cantidad" class="form-control" id="inputCantidad" placeholder="Cantidad">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center mt-1">
-                            <button type="button" class="btn btn-primary ">Agregar al carrito</button>
-                        </div>
-                    </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                  <h2 class="h3">{{titulo}}</h2>
+                  <p class="text-muted">{{descripcion}}</p>
                 </div>
-            </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                  <div class="row">
+                    <div class="col-6">
+                      <h4 class="precio text-center">Precio venta</h4>
+                      <p class="monto text-center">S/. {{precioventa}}</p>
+                    </div>
+                    <div class="col-6">
+                      <h4 class="precio text-center">Precio alquiler</h4>
+                      <p class="monto text-center">S/. {{preciorenta}}</p>
+                    </div>
+                  </div>
+
+                  <div class="col-12" *ngIf="logueado">
+                    <form role="form" class="center-align" [formGroup]="compraForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                      <div class="form-group col-md-12">
+                        <label for="">Cantidad</label>
+                      <div class="col-6 p-0 m-0"><input class="form-control" type="number"  onKeyDown="return false" placeholder="Cantidad" formControlName="cantidad" min="0" max={{stockventa}}></div>
+                      </div>
+                      <div class="form-group col-12">
+                        <label for="">Tipo</label>
+                      <div class="col-12 p-0 m-0">
+                        <select class="form-control" name="tipo" id="tipo" formControlName="tipo">
+                          <option value="" disabled selected>Tipo de compra</option>
+                          <option value="V">Venta</option>
+                          <option value="A">Alquiler</option>
+                        </select>
+                      </div>
+                      </div>
+
+                      <div class="col-6"><button type="submit" class="btn btn-amarillo pl-3 pr-3 pt-1 pb-1"  [disabled]="!compraForm.valid" [style.visibility]="isLoading ? 'hidden': 'visible'" >COMPRAR</button></div>
+                      <mat-spinner class="centro" diameter="25" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
+                    </div>
+                   </form>
+                  </div>
+
+                  <div class="col-12" *ngIf="!logueado">
+                    <p class="txt text-center" [routerLink]="['/login']">Inicie sesión para comprar</p>
+                    <p class="txt-registro text-center" [routerLink]="['/registro']">Si no tiene cuenta, ingrese aquí</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
         </div>
+      </div>
+
+
     </div>
-</div>

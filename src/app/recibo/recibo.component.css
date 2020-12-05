@@ -40,6 +40,18 @@
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-family: 'Rubik',sans-serif!important;
 }
+
+.btn-azul{
+  background: #133c65!important;
+  border: 1px solid#133c65!important;
+  border-radius: 2.5em!important;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Rubik',sans-serif!important;
+}
+
+
 .btn-amarillo{
   background: #ffa600!important;
   border: 1px solid #ffa600!important;

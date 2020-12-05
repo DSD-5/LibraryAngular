@@ -1,5 +1,5 @@
 <div class="col-12 mt-3">
-    <div class="row">
+    <div [style.visibility]="!isLoading ? 'visible': 'hidden'" class="row">
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
               <h1 class="titulo">CARRITO DE COMPRAS</h1>
                 <table class="table mt-4">
@@ -16,7 +16,12 @@
                         <tr>
                             <th><a class="libro">{{l.title}} <strong style="font-weight: 600;">({{l.type}})</strong></a></th>
                             <th><span class="precio">S/. {{l.price}}</span></th>
-                            <th>{{l.quantity}}</th>
+                            <th>
+                              <div class="row">
+                                <div class="form-group col-md-6"><input class="form-control"  type="number" value="{{l.quantity}}"  id="cantidad"></div>
+                                <div class="form-group col-md-6"><button type="button" class="btn btn-amarillo" (click)="actualizar(l.bookid,l.type)">Actualizar</button></div>
+                              </div>
+                            </th>
                             <th><span class="precio">S/. {{l.subtotal}}</span></th>
                         </tr>
                     </tbody>
@@ -75,9 +80,19 @@
                     </div>
                 </div>
                 <div class="col-12 mt-1">
-                    <button type="button" class="btn btn-amarillo btn-block"><span class="comprar">Comprar</span></button>
+                    <button type="button" class="btn btn-amarillo btn-block" (click)="comprar()"><span class="comprar">Comprar</span></button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-12" [style.visibility]="isLoading ? 'visible': 'hidden'">
+      <div class="row nomargin">
+        <div class="col-5"></div>
+        <div class="col-2 text-center">
+          <mat-spinner class="centro" diameter="60"></mat-spinner>
+        </div>
+        <div class="col-5"></div>
+      </div>
+    </div>
+
 </div>

@@ -100,3 +100,17 @@
   font-weight: 700;
   font-size: 1.3em;
 }
+
+.centro{
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+}
+
+.nomargin{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

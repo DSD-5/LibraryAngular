@@ -93,7 +93,7 @@ h1.example-app-name {
 
 .item-cat:hover {
   background-color: red;
-  
+
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
@@ -104,5 +104,44 @@ h1.example-app-name {
   color: #666;
   line-height: 22px;
   font-size: 14px;
-    
+
+}
+
+.footer{
+  background: #133c65;
+  min-height: 100px;
+  bottom: 0px;
+}
+
+.title-footer{
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-family: 'Rubik',sans-serif!important;
+}
+
+.text-footer{
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-family: 'Rubik',sans-serif!important;
+}
+
+.der-footer{
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-family: 'Rubik',sans-serif!important;
+}
+
+.der{
+  bottom: 0px;
+  background-color: #0b2b4a;
+  height: 30px;
 }

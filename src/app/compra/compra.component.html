@@ -6,38 +6,50 @@
         <div class="col-12 col-lg-12">
           <p class="titulo">Resumen de orden</p>
           <pre></pre>
-          <p class="producto mt-2 pb-2" data-toggle="collapse" href="#productos">Producto en el carrito</p>
+          <p [style.visibility]="!isLoading ? 'visible': 'hidden'" class="producto mt-2 pb-2" data-toggle="collapse" href="#productos"><strong>{{items}} Producto en el carrito</strong></p>
           <div class="collapse col-12" id="productos">
-            <div class="row">
+            <div *ngFor="let l of libro" class="row mt-2 mb-0">
               <div class="col-2">
-                <p>IMAGEN</p>
+                <p><strong *ngIf="l.type=='A'">Alquiler</strong></p>
+                <p><strong *ngIf="l.type=='V'">Venta</strong></p>
               </div>
               <div class="col-10">
                 <div class="row">
                   <div class="col-8">
-                    <p>REBECA</p>
-                    <p>Cantidad:  </p>
+                    <p class="title">{{l.title}}</p>
+                    <p class="title">Cantidad:  {{l.quantity}}</p>
                   </div>
                   <div class="col-4">
-                    <p>S/. </p>
+                    <p class="title">S/. {{l.price}}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-12 mt-2">
-          <div class="row">
+            <div class="row nomargin">
+              <div class="col-4"></div>
+              <div class="col-4 text-center">
+                <mat-spinner class="centro" diameter="60" [style.visibility]="isLoading ? 'visible': 'hidden'"></mat-spinner>
+              </div>
+              <div class="col-4"></div>
+            </div>
+        <div [style.visibility]="!isLoading ? 'visible': 'hidden'" class="col-12 col-lg-12 mt-2">
+          <div class="row mt-0 mb-0">
             <div class="col-6 "><p class="text-left">Envio</p></div>
-            <div class="col-6 "><p class="text-right">S/. </p></div>
+            <div class="col-6 "><p class="text-right">S/. {{delivery}}</p></div>
+          </div>
+          <div class="row">
+            <div class="col-6 "><p class="text-left">Subtotal</p></div>
+            <div class="col-6 "><p class="text-right">S/. {{total}}</p></div>
           </div>
           <div class="row">
             <div class="col-6 "><p class="text-left total">Total del pedido</p></div>
-            <div class="col-6 "><p class="text-right txt-precio">S/. </p></div>
+            <div class="col-6 "><p class="text-right txt-precio">S/. {{total2}}</p></div>
           </div>
         </div>
-        <div class="col-12 mt-1 pb-4 text-center">
-          <button type="button" class="btn btn-amarillo pl-4 pr-4"><span class="comprar">FINALIZAR COMPRA</span></button>
+        <div [style.visibility]="!isLoading ? 'visible': 'hidden'" class="col-12 mt-1 pb-4 text-center">
+          <button type="button" class="btn btn-amarillo pl-4 pr-4"><span class="comprar" (click)="pago()">FINALIZAR COMPRA</span></button>
           <div class="btn_error left-align no-padding" id="btnPago">
           </div>
         </div>

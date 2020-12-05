@@ -42,30 +42,29 @@ export class RegistroComponent implements OnInit {
   get f() { return this.registroForm.controls; }
 
   onSubmit() {
-    const dialogRef = this.dialog.open(ModalComponent, {restoreFocus: false});
-    dialogRef.afterClosed().subscribe(() => this.router.navigate(['/login']));
-    // this.isLoading = true;
-    // var usuario = this.f.usuario.value;
-    // var contraseña = this.f.contraseña.value;
-    // var nombres = this.f.nombres.value;
-    // var paterno = this.f.paterno.value;
-    // var materno = this.f.materno.value;
-    // var dni = this.f.dni.value;
-    // var departamento = this.f.departamento.value;
-    // var provincia = this.f.provincia.value;
-    // var distrito = this.f.distrito.value;
-    // var ubigeo = this.f.ubigeo.value;
-    // var email = this.f.email.value;
-    // this.AuthenticationServices.registro(materno,paterno,departamento,distrito,email,"1",nombres,dni,provincia,ubigeo,usuario,contraseña).subscribe(result => {
-    //   const dialogRef = this.dialog.open(ModalComponent, {restoreFocus: false});
-    //   this.dialog.open(ModalComponent);
-    //   dialogRef.afterClosed().subscribe(() => this.router.navigate(['/login']));
-    //   this.isLoading = false;
-    // },
-    // error => {
-    //   this.isLoading = false;
-    //   this._snackBar.open("Error al registrarse", "", { duration: 3000, panelClass: ['bg-danger', 'color-white'] });
-    // })
+    // const dialogRef = this.dialog.open(ModalComponent, {restoreFocus: false});
+    // dialogRef.afterClosed().subscribe(() => this.router.navigate(['/login']));
+    this.isLoading = true;
+    var usuario = this.f.usuario.value;
+    var contraseña = this.f.contraseña.value;
+    var nombres = this.f.nombres.value;
+    var paterno = this.f.paterno.value;
+    var materno = this.f.materno.value;
+    var dni = this.f.dni.value;
+    var departamento = this.f.departamento.value;
+    var provincia = this.f.provincia.value;
+    var distrito = this.f.distrito.value;
+    var ubigeo = this.f.ubigeo.value;
+    var email = this.f.email.value;
+    this.AuthenticationServices.registro(materno,paterno,departamento,distrito,email,"1",nombres,dni,provincia,ubigeo,usuario,contraseña).subscribe(result => {
+      const dialogRef = this.dialog.open(ModalComponent, {restoreFocus: false});
+      dialogRef.afterClosed().subscribe(() => this.router.navigate(['/login']));
+      this.isLoading = false;
+    },
+    error => {
+      this.isLoading = false;
+      this._snackBar.open("Error al registrarse", "", { duration: 3000, panelClass: ['bg-danger', 'color-white'] });
+    })
 
     // this.registroForm.clearValidators();
   }

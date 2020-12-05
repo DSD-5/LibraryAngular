@@ -9,6 +9,7 @@ import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   logueado: boolean;
+  carritolleno: boolean;
   mobileQuery: MediaQueryList;
   typesOfShoes: string[] = ['Categorías', 'Novedades'];
 
@@ -34,22 +35,36 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    
+
     if(localStorage.getItem('token')) {
-      console.log('si')
       this.logueado = true;
     }
     else {
-      console.log('nada :(')
       this.logueado = false;
     }
+
+    if(localStorage.getItem('carritolleno') === 'si'){
+      //console.log('si');
+      this.carritolleno = true;
+    }
+    else{
+      //console.log('no');
+      this.carritolleno = false;
+    }
+
+
   }
 
   cerrarSesion() {
     localStorage.removeItem('token');
-    location.reload();
+    localStorage.removeItem('idcarrito');
+    localStorage.removeItem('carritolleno');
+    localStorage.removeItem('email');
+    localStorage.removeItem('montocompra');
+    window.location.href = 'http://tutiempolibro.cf/';
+    // window.location.href = 'http://localhost:4200';
   }
   shouldRun = true;
-  
+
 }
-  
+

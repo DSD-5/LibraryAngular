@@ -1,0 +1,47 @@
+.btn-amarillo{
+  background: #ffa600!important;
+  border: 1px solid #ffa600!important;
+  border-radius: 2.5em!important;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Rubik',sans-serif!important;
+}
+
+.precio{
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Rubik',sans-serif!important;
+  font-style: normal;
+}
+
+.monto{
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Rubik',sans-serif!important;
+  font-style: normal;
+}
+.txt{
+  text-align: right;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Rubik',sans-serif!important;
+  color: rgb(29, 87, 145);
+  cursor: pointer;
+}
+.txt-registro{
+  text-align: right;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Rubik',sans-serif!important;
+  color: #ffa600;
+  cursor: pointer;
+}

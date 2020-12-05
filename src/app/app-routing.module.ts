@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CatalogoCategoriaComponent } from './catalogo-categoria/catalogo-categoria.component';
 import { CompraComponent } from './compra/compra.component';
+import { ReciboComponent } from './recibo/recibo.component';
+import {PlanComponent} from './plan/plan.component';
 
 const routes: Routes = [
   { path: 'carrito', component: CarritoComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'categoria/:categoria/:id', component: CatalogoCategoriaComponent},
   { path: 'compra', component: CompraComponent},
+  { path: 'recibo', component: ReciboComponent},
+  { path: 'plan', component: PlanComponent},
   { path: '',
     redirectTo: 'catalogo',
     pathMatch: 'full'

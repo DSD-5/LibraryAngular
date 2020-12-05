@@ -15,7 +15,7 @@ export class CatalogoComponent implements OnInit {
   libroDetalle : any;
   constructor(
     private catalogoServices: CatalogoServices,
-    private auth: CarritoServices
+    private auth: AuthenticationServices,
   ) { }
 
   ngOnInit() {
@@ -23,6 +23,10 @@ export class CatalogoComponent implements OnInit {
     this.catalogoServices.listarLibros().subscribe(result => {
       this.libro = result;
     });
+
+    // this.auth.planes().subscribe(result => {
+    //   console.log(result);
+    // })
 
   }
 

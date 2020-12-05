@@ -1,0 +1,26 @@
+<div class="col-12 mt-3">
+  <div class="row">
+    <div class="col-0 col-sm-0 col-md-2 col-lg-3 col-xl-4"></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
+      <div class="row border rounded">
+        <div class="col-12 col-lg-12">
+          <p class="titulo">COMPRA REALIZADA</p>
+          <p  class="producto  pb-2" data-toggle="collapse" href="#productos"></p>
+          <p class="text-center mt-3">Correo electrónico : {{email}}</p>
+          <p class="text-center">Fecha : {{fecha}}</p>
+          <p class="text-center">Monto pagado : S/. {{monto}}</p>
+        </div>
+
+
+        <div  class="col-12 mt-1 pb-4 text-center">
+          <button type="button" class="btn btn-azul pl-4 pr-4" (click)="generatePdf()"><span class="comprar">RECIBO</span></button>
+          <button type="button" class="btn btn-amarillo pl-4 pr-4" (click)="volver()"><span class="comprar">VOLVER</span></button>
+          <div class="btn_error left-align no-padding" id="btnPago">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-0 col-sm-0 col-md-2 col-lg-3 col-xl-4"></div>
+
+  </div>
+</div>
